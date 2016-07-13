@@ -6,9 +6,9 @@
 
 ### Sumário
 
-* [`let`, `const` e block scoping](#1-let-const-and-block-scoping)
+* [`let`, `const` e block scoping](#1-let-const-e-escopo-de-block)
 * [Arrow Functions](#2-arrow-functions)
-* [Parâmetros Default de Funções](#3-default-function-parameters)
+* [Parâmetros Default de Funções](#3-parametros-default-de-funcoes)
 * [Spread/Rest Operator](#4-spread--rest-operator)
 * [Object Literal Extensions](#5-object-literal-extensions)
 * [Octal and Binary Literals](#6-octal-and-binary-literals)
@@ -28,11 +28,12 @@
 
 ### Languages
 
-* [Chinese Version (Thanks to barretlee)](http://www.barretlee.com/blog/2016/07/09/a-kickstarter-guide-to-writing-es6/)
+* [Original (em inglês)](https://github.com/metagrover/ES6-for-humans)
+* [Versão em Chinês (Graças ao barretlee)](http://www.barretlee.com/blog/2016/07/09/a-kickstarter-guide-to-writing-es6/)
 
 <br>
 
-### 1. let, const e escopo de block
+### 1. let, const e escopo de bloco
 
 `let` permite que você crie declarações limitadas a qualquer bloco, o que é chamado de escopo de bloco. Ao invés de usar `var`, que fornece escopo de função, é recomendado que se use `let` no ES6.
 
@@ -61,15 +62,11 @@ Outra forma de fazer declaração de escopo de block é usando `const`, que cria
 
 Algumas coisas a se lembrar:
 
-* "hoisting" de `let` e `const` variam da forma tradicional de "hoisting" de variáveis e funções. Ambos estão "hoistados", mas não podem ser acessados antes das suas declarações, por causa da [Temporal Dead Zone]
+* "hoisting" de `let` e `const` variam da forma tradicional de "hoisting" de variáveis e funções. Ambos estão "hoistados", mas não podem ser acessados antes das suas declarações, por causa da [Temporal Dead Zone](http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified/) 
 * `let` e `const` são escopadas aos fechamentos de bloco mais próximos.
 * Quando usar `const`, use CAPITAL_CASING
 * `const` deve ser definida na sua declaração
 
-* Hoisting of `let` and `const` vary from the traditional hoisting of variables and functions. Both `let` and `const` are hoisted, but cannot be accessed before their declaration, because of [Temporal Dead Zone](http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified/) 
-* `let` and `const` are scoped to the nearest enclosing block.
-* When using `const`, use CAPITAL_CASING.
-* `const` has to be defined with its declaration.
 
 <br>
 
@@ -168,7 +165,7 @@ getPrecoFinal(500); // 850
 
 ### 4. Operador Spread / Rest 
 
-O operador `...` é chamado de operador  spread ou rest, dependendo de como e onde é usado.
+O operador `...` é chamado de operador spread ou rest, dependendo de como e onde é usado.
 
 Quando usado com qualquer iterável, ele age como "spread" em elementos individuais.
 
@@ -305,7 +302,7 @@ filho.foo(); // Hello do Pai
 
 <br>
 
-### 9. Literal de Template e Delimitadores
+### 9. Literal de Template e Delimitadores ()
 
 ES6 introduz uma forma mais fácil ainda de adicionar interpolação analisada automaticamente.
 
@@ -464,7 +461,7 @@ ws.has(window);    // false, window foi removido
 
 <br>
 
-### 13. Classes em ES6
+### 13. Classes em ES6 
 
 ES6 introduz uma nova sintaxe para classes. Uma coisa a se notar é que no ES6 as classes não são um novo modelo de herança orientada a objetos. Elas apenas servem como sugar sintático sobre as heranças existentes de prototype do Javascript.
 
@@ -530,7 +527,7 @@ Algumas coisas para se lembrar:
 
 <br>
 
-### 14. Símbolo
+### 14. Símbolo (Symbol)
 
 Um símbolo é um tipo único e imutável de dado introduzido no ES6. A utilidade do símbolo é gerar um identificador único, que você nunca terá acesso a ele.
 
@@ -559,7 +556,7 @@ Para receber as propriedades de um símbolo, use `Object.getOwnPropertySymbols(o
 
 <br>
 
-### 15. Iteradores
+### 15. Iteradores (Iterators)
 
 Um iterador acessa os itens de uma coleção um por vez, enquanto mantém controle da sua posição atual na sequência. Ele tem um método `next()` que retorna o próximo item da sequência. Esse método retorna um objeto com duas propriedades: `done` e `value`
 
