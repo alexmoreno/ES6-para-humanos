@@ -26,7 +26,7 @@
 
 <br>
 
-### Languages
+### Idiomas
 
 * [Original (em inglês)](https://github.com/metagrover/ES6-for-humans)
 * [Versão em Chinês (Graças ao barretlee)](http://www.barretlee.com/blog/2016/07/09/a-kickstarter-guide-to-writing-es6/)
@@ -302,7 +302,7 @@ filho.foo(); // Hello do Pai
 
 <br>
 
-### 9. Literal de Template e Delimitadores ()
+### 9. Templates Literais e Delimitadores 
 
 ES6 introduz uma forma mais fácil ainda de adicionar interpolação analisada automaticamente.
 
@@ -357,7 +357,7 @@ Um objeto é feito de índices (sempre strings) e valores, enquanto num `Map`, q
 ```javascript
 var meuMap = new Map();
 
-var indiceString = "a string",
+var indiceString = "uma string",
     indiceObj = {},
     indiceFuncao = function() {};
 
@@ -368,8 +368,8 @@ meuMap.set(indiceFuncao, "valor associado com indiceFuncao");
 
 meuMap.size; // 3
 
-// getting the values
-meuMap.get(indiceString);    // "valor associado com 'a string'"
+// recebendo os valores
+meuMap.get(indiceString);    // "valor associado com 'uma string'"
 meuMap.get(indiceObj);       // "valor associado com indiceObj"
 meuMap.get(indiceFuncao);      // "valor associado com indiceFuncao"
 ```
