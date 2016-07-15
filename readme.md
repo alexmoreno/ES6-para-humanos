@@ -463,7 +463,7 @@ ws.has(window);    // false, window foi removido
 
 ### 13. Classes em ES6 
 
-ES6 introduz uma nova sintaxe para classes. Uma coisa a se notar é que no ES6 as classes não são um novo modelo de herança orientada a objetos. Elas apenas servem como sugar sintático sobre as heranças existentes de prototype do Javascript.
+ES6 introduz uma nova sintaxe para classes. Uma coisa a se notar é que no ES6 as classes não são um novo modelo de herança orientada a objetos. Elas apenas servem como sintaxe de açúcar sobre as heranças existentes de prototype do Javascript.
 
 Dá para se olhar para as classes do ES6 como apenas uma nova sintaxe para se trabalhar com prototypes e funções construtoras que usaríamos no ES5
 
