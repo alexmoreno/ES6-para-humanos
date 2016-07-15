@@ -631,8 +631,8 @@ var p = new Promise(function(resolve, reject) {
 Toda promisse tem um método chamado `then`, que recebe um par de callbacks. O primeiro callback é chamado se a promise for resolvida, enquanto o segundo é chamado se for rejeitada.
 
 ```javascript
-p.then((val) => console.log("Promise Rejeitada", val),
-       (err) => console.log("Promise Resolvida", err));
+p.then((val) => console.log("Promise Resolvida", val),
+       (err) => console.log("Promise Rejeitada", err));
 ```
 
 O valor de retorno de `then` vai ser passado como valor pro próximo `then`.
