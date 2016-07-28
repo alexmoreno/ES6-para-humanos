@@ -18,7 +18,7 @@
 * [for...of vs for...in](https://github.com/alexmoreno/ES6-para-humanos#10-forof-vs-forin)
 * [Map e WeakMap](https://github.com/alexmoreno/ES6-para-humanos#11-map-e-weakmap)
 * [Set e WeakSet](https://github.com/alexmoreno/ES6-para-humanos#12-set-e-weakset)
-* [Classes e, ES6](https://github.com/alexmoreno/ES6-para-humanos#13-classes-em-es6)
+* [Classes em ES6](https://github.com/alexmoreno/ES6-para-humanos#13-classes-em-es6)
 * [Símbolo (Symbol)](https://github.com/alexmoreno/ES6-para-humanos#14-símbolo-symbol)
 * [Iteradores (Iterators)](https://github.com/alexmoreno/ES6-para-humanos#15-iteradores-iterators)
 * [Geradores (Generators)](https://github.com/alexmoreno/ES6-para-humanos#16-geradores-generators)
@@ -30,6 +30,8 @@
 
 * [Original (em inglês)](https://github.com/metagrover/ES6-for-humans)
 * [Versão em Chinês (Graças ao barretlee)](http://www.barretlee.com/blog/2016/07/09/a-kickstarter-guide-to-writing-es6/)
+* [Versão em Russo (Graças to etnolover)](https://github.com/etnolover/ES6-for-humans-translation)
+* [Versão em Coreano (Graças ao scarfunk)](https://github.com/metagrover/ES6-for-humans/tree/korean-version)
 
 <br>
 
@@ -62,7 +64,7 @@ Outra forma de fazer declaração de escopo de block é usando `const`, que cria
 
 Algumas coisas a se lembrar:
 
-* "hoisting" de `let` e `const` variam da forma tradicional de "hoisting" de variáveis e funções. Ambos estão "hoistados", mas não podem ser acessados antes das suas declarações, por causa da [Temporal Dead Zone](http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified/) 
+* "hoisting" de `let` e `const` variam da forma tradicional de "hoisting" de variáveis e funções. Ambos estão "hoistados", mas não podem ser acessados antes das suas declarações, por causa da [Temporal Dead Zone](http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified/)
 * `let` e `const` são escopadas aos fechamentos de bloco mais próximos.
 * Quando usar `const`, use CAPITAL_CASING
 * `const` deve ser definida na sua declaração
@@ -84,7 +86,7 @@ let adicao = (a, b) => a + b;
 ```
 Note que no exemplo acima, a arrow function `adicao` é implementada com um "corpo conciso" que não precisa de declaração de retorno explícita.
 
-Segue um exemplo com o "corpo de bloco" 
+Segue um exemplo com o "corpo de bloco"
 
 ```javascript
 let arr = ['maçã', 'banana', 'laranja'];
@@ -100,7 +102,7 @@ console.log(cafe_da_manha); // ['maçãs', 'bananas', 'laranjas']
 
 ##########
 
-Arrow functions não só reduzem o tamanho do código. Também estão relacionados ao comportamento do binding do `this` 
+Arrow functions não só reduzem o tamanho do código. Também estão relacionados ao comportamento do binding do `this`
 
 O comportamento das arrow functions com o `this` é diferente do das funções normais. Cada função no JavaScript define seu próprio contexto de `this`, mas as Arrow functions capturam o `this` do seu contexto delimitador. Dá uma olhada no código a seguir:
 
@@ -111,8 +113,8 @@ function Pessoa() {
     this.idade = 0;
 
     setInterval(function envelhecer() {
-        // Quando não se usa strict mode, a função envelhecer() 
-        // define `this` como o objeto global, que é diferente 
+        // Quando não se usa strict mode, a função envelhecer()
+        // define `this` como o objeto global, que é diferente
         // do `this` definido pelo construtor de Pessoa()
         this.idade++;
     }, 1000);
@@ -163,7 +165,7 @@ getPrecoFinal(500); // 850
 
 <br>
 
-### 4. Operador Spread / Rest 
+### 4. Operador Spread / Rest
 
 O operador `...` é chamado de operador spread ou rest, dependendo de como e onde é usado.
 
@@ -196,14 +198,14 @@ ES6 permite que se declare objetos literais com uma sintaxe abreviada para inici
 ```javascript
 function getCarro(fabricante, modelo, valor) {
     return {
-        // com a sintaxe abreviada de 
+        // com a sintaxe abreviada de
         // valor da propriedade, você
         // pode omitir o valor da propriedade
-        // se o índice casa com o nome 
+        // se o índice casa com o nome
         // da variável
 
 
-        
+
         fabricante,  // o mesmo que fabricante: fabricante
         modelo, // o mesmo que modelo: modelo
         valor, // o mesmo que valor: valor
@@ -215,7 +217,7 @@ function getCarro(fabricante, modelo, valor) {
         // sintaxe de abreviação de definição
         // de método omite a keyword `function`
         // e a vírgula
-        
+
         depreciar() {
             this.valor -= 2500;
         }
@@ -302,7 +304,7 @@ filho.foo(); // Hello do Pai
 
 <br>
 
-### 9. Templates Literais e Delimitadores 
+### 9. Templates Literais e Delimitadores
 
 ES6 introduz uma forma mais fácil ainda de adicionar interpolação analisada automaticamente.
 
@@ -461,7 +463,7 @@ ws.has(window);    // false, window foi removido
 
 <br>
 
-### 13. Classes em ES6 
+### 13. Classes em ES6
 
 ES6 introduz uma nova sintaxe para classes. Uma coisa a se notar é que no ES6 as classes não são um novo modelo de herança orientada a objetos. Elas apenas servem como sintaxe de açúcar sobre as heranças existentes de prototype do Javascript.
 
@@ -475,11 +477,11 @@ class Tarefa {
     constructor() {
         console.log("tarefa instanciada!");
     }
-    
+
     mostrarId() {
         console.log(23);
     }
-    
+
     static carregarTodas() {
         console.log("carregando todas as tarefas..");
     }
@@ -584,7 +586,6 @@ Perceba que você pode escrever iteradores customizados definindo `obj[Symbol.it
 ### 16. Geradores (Generators)
 
 Funções geradoras são um novo recurso que permite que uma função gere quantos valores forem necessários retornando um objeto que pode ser iterado para puxar mais valores da função, um por vez.
-Generators functions are a new feature in ES6 that allow a function to generate many values over time by returning an object which can be iterated over to pull values from the function one value at a time.
 
 Uma função geradora retorna um **objeto iterável** quando é chamada.
 É escrita usando a nova sintaxe `*` além da nova keyword `yield` introduzida no ES6.
