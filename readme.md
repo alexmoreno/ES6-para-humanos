@@ -293,13 +293,13 @@ var pai = {
 var filho = {
     foo() {
         super.foo();
-        console.log("Hello do Child");
+        console.log("Hello do Filho");
     }
 }
 
 Object.setPrototypeOf(filho, pai);
 filho.foo(); // Hello do Pai
-             // Hello do Child
+             // Hello do Filho
 ```
 
 <br>
@@ -313,7 +313,7 @@ ES6 introduz uma forma mais fácil ainda de adicionar interpolação analisada a
 
 ```javascript
 let user = 'Kevin';
-console.log(`Oĺá ${user}!`); // Oĺá Kevin!
+console.log(`Olá ${user}!`); // Olá Kevin!
 ```
 
 <br>
