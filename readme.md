@@ -129,7 +129,7 @@ function Pessoa() {
     var self = this;
     self.idade = 0;
 
-    setInterval(function growUp() {
+    setInterval(function envelhecer() {
         // O callback se refere à variável  `self` cujo valor
         // é o objeto esperado
         self.idade++;
