@@ -500,7 +500,7 @@ Considere o código a seguir:
 ```javascript
 class Carro {
     constructor() {
-        console.log("Criando um novo carror");
+        console.log("Criando um novo carro");
     }
 }
 
@@ -512,11 +512,11 @@ class Porsche extends Carro {
 }
 
 let c = new Porsche();
-// Criando um novo carror
+// Criando um novo carro
 // Criando um Porsche
 ```
 
-`extends` permite que classes filhas herdem das classes pais no ES6. É importante notar que o construtor derivado deve invocar super().
+`extends` permite que classes filhas herdem da classe pai no ES6. É importante notar que o construtor derivado deve invocar super().
 
 Você também pode chamar o método da classe pai na classe filha usando  `super.nomeDoMetodoPai()`
 
