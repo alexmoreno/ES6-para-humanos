@@ -129,7 +129,7 @@ function Pessoa() {
     var self = this;
     self.idade = 0;
 
-    setInterval(function growUp() {
+    setInterval(function envelhecer() {
         // O callback se refere à variável  `self` cujo valor
         // é o objeto esperado
         self.idade++;
@@ -293,13 +293,13 @@ var pai = {
 var filho = {
     foo() {
         super.foo();
-        console.log("Hello do Child");
+        console.log("Hello do Filho");
     }
 }
 
 Object.setPrototypeOf(filho, pai);
 filho.foo(); // Hello do Pai
-             // Hello do Child
+             // Hello do Filho
 ```
 
 <br>
@@ -313,7 +313,7 @@ ES6 introduz uma forma mais fácil ainda de adicionar interpolação analisada a
 
 ```javascript
 let user = 'Kevin';
-console.log(`Oĺá ${user}!`); // Oĺá Kevin!
+console.log(`Olá ${user}!`); // Olá Kevin!
 ```
 
 <br>
@@ -500,7 +500,7 @@ Considere o código a seguir:
 ```javascript
 class Carro {
     constructor() {
-        console.log("Criando um novo carror");
+        console.log("Criando um novo carro");
     }
 }
 
@@ -512,11 +512,11 @@ class Porsche extends Carro {
 }
 
 let c = new Porsche();
-// Criando um novo carror
+// Criando um novo carro
 // Criando um Porsche
 ```
 
-`extends` permite que classes filhas herdem das classes pais no ES6. É importante notar que o construtor derivado deve invocar super().
+`extends` permite que classes filhas herdem da classe pai no ES6. É importante notar que o construtor derivado deve invocar super().
 
 Você também pode chamar o método da classe pai na classe filha usando  `super.nomeDoMetodoPai()`
 
