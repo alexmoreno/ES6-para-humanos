@@ -64,7 +64,7 @@ Outra forma de fazer declaração de escopo de block é usando `const`, que cria
 
 Algumas coisas a se lembrar:
 
-* "hoisting" de `let` e `const` variam da forma tradicional de "hoisting" de variáveis e funções. Ambos estão "hoistados", mas não podem ser acessados antes das suas declarações, por causa da [Temporal Dead Zone](http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified/)
+* "hoisting" de `let` e `const` variam da forma tradicional de "hoisting" de variáveis e funções. Ambos estão "hoistados", mas não podem ser acessados antes das suas declarações, por causa da [Temporal Dead Zone](http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified)
 * `let` e `const` são escopadas aos fechamentos de bloco mais próximos.
 * Quando usar `const`, use CAPITAL_CASING
 * `const` deve ser definida na sua declaração
